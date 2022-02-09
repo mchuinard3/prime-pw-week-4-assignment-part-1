@@ -22,7 +22,8 @@ console.log('Test - should say "Hello, Michael!"', helloName(name));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
-  return firstNumber + secondNumber;
+  let answer = firstNumber + secondNumber;
+  return answer;
   // return firstNumber + secondNumber;
 }
 console.log('Test - adding 2 + 2:', addNumbers(2, 2));
@@ -30,7 +31,8 @@ console.log('Test - adding 2 + 2:', addNumbers(2, 2));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNumber, secondNumber, thirdNumber ){
-  return firstNumber * secondNumber * thirdNumber;
+  let answer = firstNumber * secondNumber * thirdNumber;
+  return answer;
 
 }
 console.log('Test - multiplying 2 x 3 x 4:', multiplyThree(2, 3, 4));
@@ -55,16 +57,29 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  let lastItemInArray;
+  if (array.length > 0) {
+    lastItemInArray = array.pop();
+    return lastItemInArray;
+  }
+  return 'undefined';
 }
+console.log('The last item in my array is:', getLast(['hockey', 'soccer', 'golf']));
+
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
 }
-
+console.log('Test - should say true:', find(56, [0, 44, 33, 56]));
+console.log('Test - should say false:', find(56, [12, 14, 57, 99]));
 // ----------------------
 // Stretch Goals
 // ----------------------
