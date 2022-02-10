@@ -113,7 +113,7 @@ function inputArray(positiveArray) {
   }
   return [];
 }
-console.log('Test - should say 4, 55, 7;', inputArray([-1, -3, -2]));
+console.log('Test - should say [] for empty array:', inputArray([-1, -3, -2]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
