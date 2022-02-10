@@ -15,25 +15,22 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return 'Hello, Michael!';
+  return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log('Test - should say "Hello, Michael!"', helloName());
+console.log('Test - should say "Hello, Michael!"', helloName('Michael'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
-  let answer = firstNumber + secondNumber;
-  return answer;
-  // return firstNumber + secondNumber;
+  return firstNumber + secondNumber;
 }
+  // return firstNumber + secondNumber;
 console.log('Test - adding 2 + 2:', addNumbers(2, 2));
 
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNumber, secondNumber, thirdNumber ){
-  let answer = firstNumber * secondNumber * thirdNumber;
-  return answer;
-
+  return firstNumber * secondNumber * thirdNumber;
 }
 console.log('Test - multiplying 2 x 3 x 4:', multiplyThree(2, 3, 4));
 
@@ -106,14 +103,15 @@ console.log('Total sum of numberArray, should be 16:', sumAll([1, 3, 5, 7]));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function inputArray(positiveArray) {
+  let secondArray = [];
   for (let i=0; i < positiveArray.length; i++) {
-    if (positiveArray[i] >= 0) {
-      return positiveArray[i];
+    if (positiveArray[i] > 0) {
+      secondArray.push(positiveArray[i]);
+      }
     }
-  }
-  return [];
+    return secondArray;
 }
-console.log('Test - should say [] for empty array:', inputArray([-1, -3, -2]));
+console.log('Test - should say [] for empty array:', inputArray([-1, -3, -2, 4, 6, 55]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
