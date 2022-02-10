@@ -18,7 +18,7 @@ function helloName( name ) {
   return 'Hello, Michael!';
 }
 // Remember to call the function to test
-console.log('Test - should say "Hello, Michael!"', helloName(name));
+console.log('Test - should say "Hello, Michael!"', helloName());
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -113,7 +113,7 @@ function inputArray(positiveArray) {
   }
   return [];
 }
-console.log('Test - should say 4, 55, 7;', inputArray([-1, -3, 4, 55, 7]));
+console.log('Test - should say 4, 55, 7;', inputArray([-1, -3, -2]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
