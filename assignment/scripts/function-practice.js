@@ -40,9 +40,7 @@ function isPositive( number ) {
   if ( number > 0 ){
     return true;
   }
-  else{
     return false;
-  }
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
@@ -93,7 +91,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll(numberArray) {
   let sum = 0
   // TODO: loop to add items
-  for (let i=0; i < numberArray.length; i++) {
+  for (let i = 0; i < numberArray.length; i++) {
     sum+=numberArray[i];
   }
   return sum;
@@ -103,13 +101,13 @@ console.log('Total sum of numberArray, should be 16:', sumAll([1, 3, 5, 7]));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function inputArray(positiveArray) {
-  let secondArray = [];
-  for (let i=0; i < positiveArray.length; i++) {
+  let firstArray = [];
+  for (let i = 0; i < positiveArray.length; i++) {
     if (positiveArray[i] > 0) {
-      secondArray.push(positiveArray[i]);
+      firstArray.push(positiveArray[i]);
       }
     }
-    return secondArray;
+    return firstArray;
 }
 console.log('Test - should say 4, 6, 55:', inputArray([-1, -3, -2, 4, 6, 55]));
 
