@@ -37,7 +37,7 @@ console.log('Test - multiplying 2 x 3 x 4:', multiplyThree(2, 3, 4));
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
-  if ( number > 0 ){
+  if (number > 0) {
     return true;
   }
     return false;
@@ -58,12 +58,13 @@ function getLast( array ) {
   return 'undefined';
 }
 console.log('The last item in my array is:', getLast(['hockey', 'soccer', 'golf']));
+console.log('Should return undefined:', getLast([]));
 
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
+function find( value, array ) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
       return true;
@@ -79,7 +80,7 @@ console.log('Test - should say false:', find(56, [12, 14, 57, 99]));
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-if (letter === string.charAt(0)) {
+  if (letter === string.charAt(0)) {
   return true;
 }
 return false;
@@ -89,7 +90,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(numberArray) {
-  let sum = 0
+  let sum = 0;
   // TODO: loop to add items
   for (let i = 0; i < numberArray.length; i++) {
     sum+=numberArray[i];
@@ -110,6 +111,7 @@ function inputArray(positiveArray) {
     return firstArray;
 }
 console.log('Test - should say 4, 6, 55:', inputArray([-1, -3, -2, 4, 6, 55]));
+console.log('Test - should say []:', inputArray([-2, -5, -11]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
